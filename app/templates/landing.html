@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f7f9fc;
+        color: #1a1f36;
+      }
+      body {
+        margin: 0;
+        padding: 2.5rem 1.5rem 4rem;
+      }
+      header {
+        max-width: 900px;
+        margin: 0 auto 2rem;
+      }
+      h1 {
+        font-size: clamp(2.25rem, 4vw, 3rem);
+        margin: 0 0 0.25em;
+      }
+      p {
+        margin: 0;
+        line-height: 1.6;
+      }
+      .grid {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .card {
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 12px 30px rgba(20, 43, 111, 0.07);
+        display: flex;
+        flex-direction: column;
+        min-height: 320px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        overflow: hidden;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(20, 43, 111, 0.12);
+      }
+      .card h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1.35rem;
+      }
+      .card > p {
+        flex: 1;
+        margin: 0 0 1rem;
+      }
+      .card-thumb {
+        width: 100%;
+        border-radius: 10px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        box-shadow: 0 8px 20px rgba(20, 43, 111, 0.08);
+      }
+      .tags {
+        margin-top: auto;
+        padding-top: 0.75rem;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .tag {
+        background-color: rgba(74, 111, 226, 0.12);
+        color: #3342a3;
+        padding: 0.35rem 0.65rem;
+        border-radius: 999px;
+        font-size: 0.82rem;
+      }
+      .actions {
+        margin-top: 0.75rem;
+        display: inline-flex;
+        gap: 0.75rem;
+        font-size: 0.95rem;
+      }
+      .actions a {
+        color: #3342a3;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .actions a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Portfolio Map</h1>
+      <p>Explore project dashboards and deep dives. Dash apps launch inline; notebooks open in a new tab.</p>
+    </header>
+    <main class="grid">
+      <article class="card">
+        <h2>Markov Customer Flow</h2>
+        <p>Transition analysis for path probability, retention, and churn insights.</p>
+        <div class="actions">
+          <a href="/markov/">Dashboard</a>
+          <a href="/static/notebooks/markov.html" target="_blank" rel="noopener">Notebook</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Markov Chains</span>
+          <span class="tag">Retention</span>
+        </div>
+      </article>
+      <article class="card">
+        <h2>ARIMA Forecasting</h2>
+        <p>Stationarity diagnostics and future simulation with extreme tail event innovations.</p>
+        <img src="/static/thumbs/TimeSeriesArimaStaticOutput.png" alt="ARIMA forecast dashboard preview" class="card-thumb">
+        <div class="actions">
+          <a href="/arima/">Dashboard</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Time Series</span>
+          <span class="tag">Forecasting</span>
+        </div>
+      </article>
+      <article class="card">
+        <h2>Chess Piece CNN</h2>
+        <p>Training a convolutional model to classify chess pieces from board imagery.</p>
+        <img src="/static/thumbs/chessCNNoutput.png" alt="Chess CNN notebook preview" class="card-thumb">
+        <div class="actions">
+          <a href="/chess-cnn/">Notebook</a>
+          <a href="/static/notebooks/chessCNNStatic.ipynb" target="_blank" rel="noopener">Download</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Deep Learning</span>
+        </div>
+      </article>
+      <article class="card">
+        <h2>Claims Explorer</h2>
+        <p>Interactive look at claim severity, frequency, and lag distributions.</p>
+        <div class="actions">
+          <a href="/claims/">Dashboard</a>
+          <a href="/static/notebooks/claims.html" target="_blank" rel="noopener">Notebook</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Insurance</span>
+          <span class="tag">Analytics</span>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
