@@ -11,6 +11,7 @@ def register_dash_apps(app) -> None:
         "arima": "/arima/",
         "claims": "/claims/",
         "chesscnn": "/chess-cnn/",
+        "MAB": "/poll/"
     }
 
     for module_name, base_path in mappings.items():

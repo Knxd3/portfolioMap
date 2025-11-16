@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+instance/
+.env
+.pmp
+app/static
+app/__pycache__
+wsgi.py
+app/portfolioMap.code-workspace
+app/__init__
+app/dashapps
+
