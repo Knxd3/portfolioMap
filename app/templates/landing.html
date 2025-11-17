@@ -106,13 +106,13 @@
   </head>
   <body>
     <header>
-      <h1>Portfolio Map</h1>
-      <p>Explore project dashboards and deep dives. Dash apps launch inline; notebooks open in a new tab.</p>
+      <h1>Systems and Modeling Portfolio</h1>
+      <p>Portfolio of analytical and modeling builds spanning Bayesian decision systems, statistical diagnostics, forecasting engines, and ML prototypes. Each project shows the full path from data structure to method choice to operational output, with dashboards and notebooks exposing the mechanics.</p>
     </header>
     <main class="grid">
       <article class="card">
-        <h2>Saturday Lunch Thompson Sampler</h2>
-        <p>This lunch poll suggests restaurants by sampling Thompson draws from a beta-binomial model so the dashboard can recommend the most promising spot each week.</p>
+        <h2>Restaurant Thompson Sampler</h2>
+        <p>This lunch poll suggests restaurants by sampling Thompson draws from a beta-binomial model so the dashboard can recommend the most promising spot each week. The weekly reward for each posterior arm is the number of votes a restaurant receives. Thus, we learn the probability that each option is chosen. The votes are decayed to avoid stationarity. </p>
         <p>Confidence ribbons show the 5-95% posterior band for every venue, making it easy to see which options remain uncertain.</p>
         <img src="/static/thumbs/lunchOutput.png" alt="Lunch Thompson sampling confidence bands" class="card-thumb">
         <div class="actions">
@@ -120,12 +120,13 @@
         </div>
         <div class="tags">
           <span class="tag">Multi-Armed Bandit</span>
-          <span class="tag">Decision Support</span>
+          <span class="tag">Reinforcement Learning</span>
+          <span class="tag">Flask</span>
         </div>
       </article>
 
       <article class="card">
-        <h2>Insurance Claims</h2>
+        <h2>Insurance Severity Claims</h2>
         <p>Compares lognormal, gamma, and Tweedie models for extreme right-skewed severities and zero-inflation so we can see how the wrong error family distorts thin-tail data.</p>
         <p>Includes side-by-side diagnostics that highlight why matching the distribution to the process matters for pricing and capital calculations.</p>
         <img src="/static/thumbs/InsuranceOutput.png" alt="Insurance severity modeling snapshot" class="card-thumb">
@@ -139,7 +140,23 @@
       </article>
 
       <article class="card">
-        <h2>Right-Skew Forecasts</h2>
+        <h2>Value Quant Fundamentals</h2>
+        <p>Value investment fundamentals analysis platform with an AI chat assistant, integrating curated financial data from multiple endpoints.</p>
+        <p>Built with Shiny R to keep the interface reactive while surfacing the data stories and justification behind each screen.</p>
+        <img src="/static/thumbs/vqOutput.png" alt="Value Quant fundamentals dashboard preview" class="card-thumb">
+        <div class="actions">
+          <a href="https://value-quant.uk" target="_blank" rel="noopener">value-quant.uk</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Value Investing</span>
+          <span class="tag">R</span>
+          <span class="tag">Shiny</span>
+          <span class="tag">AI Chat</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Risk Simulation Forecasts</h2>
         <p>ARIMA stress tests with innovations sampled from a right-skew distribution so shocks reflect the tail behavior we see in real operations.</p>
         <p>Scenario tables quantify the probability of tail events, making the output ideal for stress testing and risk-adjusted planning.</p>
         <img src="/static/thumbs/TimeSeriesArimaStaticOutput.png" alt="ARIMA forecast dashboard preview" class="card-thumb">
@@ -152,18 +169,20 @@
         </div>
       </article>
 
-      <!-- <article class="card">
-        <h2>Markov Customer Flow</h2>
-        <p>Transition analysis for path probability, retention, and churn insights.</p>
+      <article class="card">
+        <h2>Markov Fleet Demand Forecast</h2>
+        <p>Applies a Markov arrival process to trace how riders move between stations, showing which transfer hubs retain bike flow and which lose it.</p>
+        <p>Bike share forecasts stay calibrated by combining steady-state occupancy with conditional path probabilities so planners can size inventory for peaks.</p>
+        <img src="/static/thumbs/markovBikeOutput.png" alt="Bike share Markov forecast snapshot" class="card-thumb">
         <div class="actions">
           <a href="/markov/">Dashboard</a>
-          <a href="/static/notebooks/markov.html" target="_blank" rel="noopener">Notebook</a>
+          <a href="/static/notebooks/BikeShareForecastStatic.ipynb" target="_blank" rel="noopener">Notebook</a>
         </div>
         <div class="tags">
           <span class="tag">Markov Chains</span>
-          <span class="tag">Retention</span>
+          <span class="tag">Capacity Forecasting</span>
         </div>
-      </article> -->
+      </article>
 
       <article class="card">
         <h2>Chess Piece CNN</h2>
